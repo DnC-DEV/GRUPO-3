@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var promptsync = require("prompt-sync");
 var Aluno_1 = require("./Aluno");
+var Nota_1 = require("./Nota");
 var prompt = promptsync();
 var nome = prompt('Digite o nome do alune: ');
 var turma = Number(prompt('Digite a turma do alune: '));
@@ -18,4 +19,4 @@ console.log("\tO nome do Alune \u00E9: ".concat(nome));
 console.log("\tA turma do Alune \u00E9: ".concat(turma));
 console.log("\tA idade do Alune \u00E9: ".concat(idade));
 console.log("\tO turno do Alune \u00E9: ".concat(turno));
-
+var notas = new Nota_1.Notas();

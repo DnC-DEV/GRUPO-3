@@ -1,5 +1,6 @@
 import promptsync = require('prompt-sync');
 import { Alune } from "./Aluno";
+import { Notas } from './Nota';
 
     const prompt = promptsync();
     
@@ -22,4 +23,4 @@ import { Alune } from "./Aluno";
     console.log(`\tA idade do Alune é: ${idade}`);
     console.log(`\tO turno do Alune é: ${turno}`);
 
-
+    const notas = new Notas();
