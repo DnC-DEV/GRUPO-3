@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Notas = void 0;
 var promptsync = require("prompt-sync");
+var Cabecalho_1 = require("./Cabecalho");
 var prompt = promptsync();
 function Notas() {
     var boletimP = [];
@@ -49,6 +50,7 @@ function Notas() {
     var mediaM = ((boletimM[0] + boletimM[1] + boletimM[2]) / 3);
     var mediaMAredonda = mediaM.toFixed(1);
     console.clear();
+    (0, Cabecalho_1.Cabecalho)();
     var aprovRepG;
     var aprovRepI;
     var aprovRepM;
@@ -84,11 +86,32 @@ function Notas() {
     else if (mediaM < 7) {
         aprovRepM = 'Reprovado';
     }
-    console.log("   MAT\u00C9RIA       1\u00BATRIMESTRE     2\u00BATRIMESTRE     3\u00BATRIMESTRE     MEDIA     APROVADO/REPROVADO\n");
-    console.log(" Matem\u00E1tica            ".concat(boletimM[0], "               ").concat(boletimM[1], "               ").concat(boletimM[2], "           ").concat(mediaMAredonda, "           ").concat(aprovRepM, "\n"));
-    console.log(" Portugu\u00EAs             ".concat(boletimP[0], "               ").concat(boletimP[1], "               ").concat(boletimP[2], "           ").concat(mediaPAredonda, "           ").concat(aprovRepP, "\n"));
-    console.log(" Geografia             ".concat(boletimG[0], "               ").concat(boletimG[1], "               ").concat(boletimG[2], "           ").concat(mediaGAredonda, "           ").concat(aprovRepG, "\n"));
-    console.log(" Hist\u00F3ria              ".concat(boletimH[0], "               ").concat(boletimH[1], "               ").concat(boletimH[2], "           ").concat(mediaHAredonda, "           ").concat(aprovRepH, "\n"));
-    console.log(" Ingl\u00EAs                ".concat(boletimI[0], "               ").concat(boletimI[1], "               ").concat(boletimI[2], "           ").concat(mediaIAredonda, "           ").concat(aprovRepI, "\n"));
+    var boletim = [];
+    var Matematica = [];
+    var Portugues = [];
+    var Geografia = [];
+    var Historia = [];
+    var Ingles = [];
+    Matematica[0] = boletimM;
+    Matematica[1] = mediaMAredonda;
+    Matematica[2] = aprovRepM;
+    Portugues[0] = boletimP;
+    Portugues[1] = mediaPAredonda;
+    Portugues[2] = aprovRepP;
+    Geografia[0] = boletimG;
+    Geografia[1] = mediaGAredonda;
+    Geografia[2] = aprovRepG;
+    Historia[0] = boletimH;
+    Historia[1] = mediaHAredonda;
+    Historia[2] = aprovRepH;
+    Ingles[0] = boletimI;
+    Ingles[1] = mediaIAredonda;
+    Ingles[2] = aprovRepI;
+    boletim[0] = Matematica;
+    boletim[1] = Portugues;
+    boletim[2] = Geografia;
+    boletim[3] = Historia;
+    boletim[4] = Ingles;
+    return boletim;
 }
 exports.Notas = Notas;

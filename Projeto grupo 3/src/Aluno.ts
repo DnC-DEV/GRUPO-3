@@ -19,6 +19,7 @@ constructor ({nome, turma, idade, turno}: novoAluno){
     this.turma = turma;
     this.idade = idade;
     this.turno = turno;
+
 }
-}    
+}
 export { Alune }

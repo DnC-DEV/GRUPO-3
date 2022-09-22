@@ -1,5 +1,7 @@
 import { match } from 'assert';
 import promptsync = require('prompt-sync');
+import { Cabecalho } from './Cabecalho';
+import { dadosAluno } from './dadosAluno';
 const prompt = promptsync();
 
 function Notas(){
@@ -20,13 +22,14 @@ function Notas(){
         const mediaPAredonda = mediaP.toFixed(1);
     console.clear()
 
+
     for (let i= 0; i<3; i++){
         boletimH[i] = [];
         const nota = prompt (`Digite a nota ${i+1} de História: `);
         boletimH [i] = Number (nota);
     }
     const mediaH = ((boletimH[0] + boletimH[1]+ boletimH [2]) / 3);
-        const mediaHAredonda = mediaH.toFixed(1);
+    const mediaHAredonda = mediaH.toFixed(1);
     console.clear()
 
     for (let i= 0; i<3; i++){
@@ -35,7 +38,7 @@ function Notas(){
         boletimI [i] = Number (nota) 
     }
     const mediaI = ((boletimI[0] + boletimI[1]+ boletimI [2]) / 3);
-        const mediaIAredonda = mediaI.toFixed(1);
+    const mediaIAredonda = mediaI.toFixed(1);
     console.clear()
 
     for (let i= 0; i<3; i++){
@@ -44,7 +47,7 @@ function Notas(){
         boletimG [i] = Number (nota) 
     }
     const mediaG = ((boletimG[0] + boletimG[1]+ boletimG [2]) / 3);
-        const mediaGAredonda = mediaG.toFixed(1);
+    const mediaGAredonda = mediaG.toFixed(1);
     console.clear()
 
     for (let i= 0; i<3; i++){
@@ -53,9 +56,11 @@ function Notas(){
         boletimM [i] = Number (nota) 
     }
     const mediaM = ((boletimM[0] + boletimM[1]+ boletimM [2]) / 3);
-        const mediaMAredonda = mediaM.toFixed(1);
+    const mediaMAredonda = mediaM.toFixed(1);
 
     console.clear()
+
+    Cabecalho();
 
     let aprovRepG: string
     let aprovRepI: string
@@ -97,13 +102,42 @@ function Notas(){
         else if(mediaM<7){
             aprovRepM = 'Reprovado'
         }
+        
+    
+    const boletim = [];
+    const Matematica = [];
+    const Portugues = [];
+    const Geografia = [];
+    const Historia = [];
+    const Ingles = [];
 
-    console.log(`   MATÉRIA       1ºTRIMESTRE     2ºTRIMESTRE     3ºTRIMESTRE     MEDIA     APROVADO/REPROVADO\n`);
-    console.log(` Matemática            ${boletimM[0]}               ${boletimM[1]}               ${boletimM[2]}           ${mediaMAredonda}           ${aprovRepM}\n`);
-    console.log(` Português             ${boletimP[0]}               ${boletimP[1]}               ${boletimP[2]}           ${mediaPAredonda}           ${aprovRepP}\n`);
-    console.log(` Geografia             ${boletimG[0]}               ${boletimG[1]}               ${boletimG[2]}           ${mediaGAredonda}           ${aprovRepG}\n`);
-    console.log(` História              ${boletimH[0]}               ${boletimH[1]}               ${boletimH[2]}           ${mediaHAredonda}           ${aprovRepH}\n`);
-    console.log(` Inglês                ${boletimI[0]}               ${boletimI[1]}               ${boletimI[2]}           ${mediaIAredonda}           ${aprovRepI}\n`);
+    Matematica[0] = boletimM;
+    Matematica[1] = mediaMAredonda;
+    Matematica[2] = aprovRepM;
+
+    Portugues[0] = boletimP;
+    Portugues[1] = mediaPAredonda;
+    Portugues[2] = aprovRepP;
+
+    Geografia[0] = boletimG;
+    Geografia[1] = mediaGAredonda;
+    Geografia[2] = aprovRepG;
+
+    Historia[0] = boletimH;
+    Historia[1] = mediaHAredonda;
+    Historia[2] = aprovRepH;
+
+    Ingles[0] = boletimI;
+    Ingles[1] = mediaIAredonda;
+    Ingles[2] = aprovRepI;
+    
+    boletim[0] = Matematica;
+    boletim[1] = Portugues;
+    boletim[2] = Geografia;
+    boletim[3] = Historia;
+    boletim[4] = Ingles;
+
+    return boletim;
 }
 
 export { Notas }
