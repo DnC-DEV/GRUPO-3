@@ -7,7 +7,7 @@ var prompt = promptsync();
 var nome = prompt('Digite o nome do alune: ');
 var turma = Number(prompt('Digite a turma do alune: '));
 var idade = Number(prompt('Digite a idade do alune: '));
-var turno = prompt('Digite o turno do alune: ');
+var turno = prompt('Digite o turno do alune (Manhã / Tarde / Noite): ');
 var alune = new Aluno_1.Alune({
     nome: nome,
     turma: turma,
@@ -15,8 +15,11 @@ var alune = new Aluno_1.Alune({
     turno: turno
 });
 console.clear();
-console.log("\tO nome do Alune \u00E9: ".concat(nome));
-console.log("\tA turma do Alune \u00E9: ".concat(turma));
-console.log("\tA idade do Alune \u00E9: ".concat(idade));
-console.log("\tO turno do Alune \u00E9: ".concat(turno));
+console.log("\n");
+console.log("\t           _____________________________________");
+console.log("\t          |                                     |");
+console.log("\t          |    B O L E T I M   E S C O L A R    |");
+console.log("\t          |_____________________________________|\n\n");
+console.log("\t         Nome: ".concat(nome, "          Turno: ").concat(turno, "  "));
+console.log("\t         Idade: ".concat(idade, "            Turma: ").concat(turma, "  \n\n\n"));
 var notas = new Nota_1.Notas();
