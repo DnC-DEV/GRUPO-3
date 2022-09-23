@@ -17,12 +17,13 @@ function dadosAluno(dadosBoletim) {
     });
     console.clear();
     console.log("\n");
-    console.log("\t           _____________________________________");
-    console.log("\t          |                                     |");
-    console.log("\t          |    B O L E T I M   E S C O L A R    |");
-    console.log("\t          |_____________________________________|\n\n");
-    console.log("\t         Nome: ".concat(nome, "          Turno: ").concat(turno, "  "));
-    console.log("\t         Idade: ".concat(idade, "            Turma: ").concat(turma, "  \n\n\n"));
+    console.log("\n");
+    console.log("\t\t           _____________________________________");
+    console.log("\t\t          |                                     |");
+    console.log("\t\t          |    B O L E T I M   E S C O L A R    |");
+    console.log("\t\t          |_____________________________________|\n\n");
+    console.log("\t\t          Nome: ".concat(nome, "             Turno: ").concat(turno, "  "));
+    console.log("\t\t         Idade: ".concat(idade, "            Turma: ").concat(turma, "  \n\n\n"));
     return [nome, turno, idade, turma];
 }
 exports.dadosAluno = dadosAluno;

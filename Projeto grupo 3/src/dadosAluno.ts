@@ -19,13 +19,14 @@ function dadosAluno(dadosBoletim){
     console.clear();
 
     console.log("\n");
-    console.log("\t           _____________________________________");
-    console.log("\t          |                                     |");
-    console.log("\t          |    B O L E T I M   E S C O L A R    |");
-    console.log("\t          |_____________________________________|\n\n");
+    console.log("\n");
+    console.log("\t\t           _____________________________________");
+    console.log("\t\t          |                                     |");
+    console.log("\t\t          |    B O L E T I M   E S C O L A R    |");
+    console.log("\t\t          |_____________________________________|\n\n");
 
-    console.log(`\t         Nome: ${nome}          Turno: ${turno}  `);
-    console.log(`\t         Idade: ${idade}            Turma: ${turma}  \n\n\n`);
+    console.log(`\t\t          Nome: ${nome}             Turno: ${turno}  `);
+    console.log(`\t\t         Idade: ${idade}            Turma: ${turma}  \n\n\n`);
 
     return [nome, turno, idade, turma]
 }
