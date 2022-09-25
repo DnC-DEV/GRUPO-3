@@ -1,4 +1,3 @@
-import { Alune } from "./Aluno";
 import promptsync = require('prompt-sync');
 const prompt = promptsync();
 

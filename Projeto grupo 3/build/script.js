@@ -1,8 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var promptsync = require("prompt-sync");
+//import { Alune } from "./Aluno";
 var Nota_1 = require("./Nota");
+//import { dadosAluno } from './dadosAluno';
 var tabela_1 = require("./tabela");
+//import { Cabecalho } from './Cabecalho';
 var prompt = promptsync();
 var boletim = (0, Nota_1.Notas)();
 (0, tabela_1.TabelaDeNotas)(boletim);

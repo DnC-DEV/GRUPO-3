@@ -1,5 +1,3 @@
-import { isConstructorTypeNode } from "typescript";
-
 interface novoAluno{
     nome:string
     turma:number

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cabecalho = void 0;
+//import { Alune } from "./Aluno";
 var promptsync = require("prompt-sync");
 var prompt = promptsync();
 function Cabecalho() {

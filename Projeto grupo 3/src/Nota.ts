@@ -1,7 +1,5 @@
-import { match } from 'assert';
 import promptsync = require('prompt-sync');
 import { Cabecalho } from './Cabecalho';
-import { dadosAluno } from './dadosAluno';
 const prompt = promptsync();
 
 function Notas(){
