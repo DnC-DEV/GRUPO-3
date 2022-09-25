@@ -1,5 +1,4 @@
 "use strict";
-//import { isConstructorTypeNode } from "typescript";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Alune = void 0;
 var Alune = /** @class */ (function () {

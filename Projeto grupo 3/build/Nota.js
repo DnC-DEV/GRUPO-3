@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Notas = void 0;
-//import { match } from 'assert';
 var promptsync = require("prompt-sync");
 var Cabecalho_1 = require("./Cabecalho");
-//import { dadosAluno } from './dadosAluno';
 var prompt = promptsync();
 function Notas() {
     var boletimP = [];
